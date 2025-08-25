@@ -10,5 +10,5 @@ while num>0:
 if result == n:
     print(f"{n} is a armstrong")
 else:
-        print(f"{n} is not a armstrong")
+    print(f"{n} is not a armstrong")
 
