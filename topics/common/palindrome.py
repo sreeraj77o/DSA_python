@@ -1,4 +1,4 @@
-n=1234
+n=121
 num=n
 result=0
 while num>0:
