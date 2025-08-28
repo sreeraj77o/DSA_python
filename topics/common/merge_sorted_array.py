@@ -1,5 +1,5 @@
 a = [1,4,5,6]
-b = [2,3,8,7]
+b = [2,3,7,8]
 
 def merge_sorted_array(a,b):
     i=0
