@@ -1,22 +1,18 @@
-def sumsorted(arr):
-    n =len(arr)
+def sum_sorted(arr,target):
     left = 0
-    right = n - 1
-    result = [0] * n
-    result_pointer = n - 1
-    # arr.sort()
-
-    while left <= right:
-        left_val_sq = arr[left] * arr[left]
-        right_val_sq = arr[right] * arr[right]
-
-        if left_val_sq > right_val_sq:
-            result[result_pointer] = left_val_sq
-            left +=1
+    right = len(arr) - 1
+    while left < right:
+        current_sum = arr[left] + arr[right]
+        if current_sum == target:
+            return [left,right]
+        elif current_sum < target:
+            left += 1
         else:
-            result[result_pointer] = right_val_sq
             right -= 1
-        result_pointer -=1
-    return result
-arr = [-3,-1,3,2,0]
-print(sumsorted(arr))
+    return []
+
+arr = [1,4,6,7,8,9,3]
+arr.sort()
+target = 4
+result = sum_sorted(arr,target)
+print(f"the target sum is {target} and the result is {result}")
