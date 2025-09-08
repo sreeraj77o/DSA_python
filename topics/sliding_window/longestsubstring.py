@@ -17,5 +17,5 @@ def longestsunstring(s,k):
 
     return max_length
 
-s = 'araaci'
-print(longestsunstring(s,2))
+s = 'ci'
+print(longestsunstring(s,1))
